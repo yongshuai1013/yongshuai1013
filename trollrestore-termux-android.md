@@ -23,7 +23,7 @@
 
 採用 [usedoperative-sudo/termux-usbmuxd](https://github.com/usedoperative-sudo/termux-usbmuxd) 方案（以 Termux:API 的 USB 存取餵給 usbmuxd）。
 
-> **前置注意：Termux 與 Termux:API 本體都是 Android App（APK 檔），要先裝在手機上**（建議用 F-Droid 或 GitHub 發布的版本，Play 商店版已停止更新）。`termux-usb` 指令來自 Termux:API 這個 App；下面 `pkg install termux-api` 裝的是 Termux 內部的對接套件——**App 本體（APK）與 pkg 套件兩者缺一不可**，只裝 pkg 沒裝 App，`termux-usb` 不會動。
+> **注意：這裡的 termux-api 本體是一個 APK 檔。** 上游專案的需求清單把 Termux:API 列為跟 Termux 本體一樣、要從 F-Droid 安裝的 Android App（APK），`termux-usb` 靠這個 App 存取 USB。下面 `pkg install` 裡同名的 `termux-api` 是它在 Termux 裡的指令對接套件；只裝 pkg、沒裝那個 APK App，`termux-usb` 不會動。
 
 ```bash
 pkg install usbmuxd libimobiledevice termux-api
