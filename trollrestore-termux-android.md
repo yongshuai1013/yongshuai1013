@@ -68,8 +68,7 @@ python3 -c "import _cffi_backend; print('ok')"
 
 ### 2-3. 釘版安裝 pymobiledevice3（不要直接裝 requirements.txt）
 
-直接 `pip install -r requirements.txt` 會拉最新版 pymobiledevice3，兩
-...[truncated 2324 chars]個原因都不能用：
+直接 `pip install -r requirements.txt` 會拉最新版 pymobiledevice3，兩個原因都不能用：
 
 1. 它的依賴含 qh3、av 等要在 Android 上現編的套件，裝不上；
 2. **7.0 起移除了 `cli.cli_common.Command`**，而 trollstore.py 直接 import 它——最新版在任何平台都跑不起來 TrollRestore。
